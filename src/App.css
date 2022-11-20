@@ -1,0 +1,142 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0 ;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.calculator-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+  gap: 8px;
+  margin: 0 auto ;
+}
+.span2{
+  grid-column: span 2;
+  text-align: start;
+  padding-left: 30px;
+}
+.output {
+  grid-column: 1 / -1;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: #fff;
+  margin-top: 30px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+button{
+  background-color: #313131;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 35px;
+  cursor: pointer;
+  border: none;
+}
+button:active{
+  background-color: rgb(167, 152, 152 );
+}
+.color-orange{
+  background-color: #ffa500;
+  font-size: 39px;
+}
+.color-orange:nth-last-of-type(17){
+  background-color: #9f9f9f;
+  color: #000;
+}
+.grey{
+  background-color: #9f9f9f;
+  color: #000;
+}
+
+.grey:active{
+  background-color: rgb(179, 179, 179);
+  color: #000;
+}
+.color-orange:focus{
+  background-color: #fff;
+  color: #ffa500;
+}
+.output .previous-operand{
+  color: rgba(255, 255, 255, .75);
+  font-size: 2rem;
+}
+
+.output .current-operand{
+  color: #fff;
+  font-size: 3.5rem;
+}
+
+@media (max-width: 575px) {
+  .calculator-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 5rem);
+    grid-template-rows: minmax(7rem, auto) repeat(5, 5rem);
+    gap: 8px;
+    margin: 5px 0 ;
+  }
+  button{
+    text-align: center;
+  }
+}
+
