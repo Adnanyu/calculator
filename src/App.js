@@ -89,6 +89,8 @@ const reducer = (state, { type, payload }) => {
         ...state,
         currentNumber: state.currentNumber.slice( 0, -1)
       }
+    default:
+      return state
   }
 }
 
@@ -145,9 +147,9 @@ function App() {
   const resultHandler = () => {
     dispatch({type: ACTIONS.CALCULATE_RESULT})
   }
-  const operationHandler = () => {
-    dispatch({type: ACTIONS.ADD_OPERATION, payload: { operation }})
-  }
+  //const operationHandler = () => {
+    //dispatch({type: ACTIONS.ADD_OPERATION, payload: { operation }})
+  //}
   return (
     <div className="calculator-grid">
       <div className='output'>
